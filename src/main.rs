@@ -9,14 +9,14 @@ mod rendering;
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .init_state::<GameState>
+        .init_state::<GameState>()
         .add_plugins(GamePlugin)
         .run();
 }
 
-#[derive(States, Default, )]
+#[derive(Debug, Clone, Eq, PartialEq, Hash, Default, States)]
 pub enum GameState {
-    #[default],
+    #[default]
     InMenu,
     InGame,
     GameOver,

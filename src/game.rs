@@ -1,4 +1,4 @@
-use bevy::{app::{App, Plugin, Update}, ecs::schedule::{IntoScheduleConfigs, SystemSet}, state::{condition::in_state, state::{OnEnter, OnExit}}};
+use bevy::{app::prelude::*, ecs::schedule::{IntoScheduleConfigs, SystemSet}, state::{condition::in_state, state::{OnEnter, OnExit}}};
 
 use crate::{GameState, logic, rendering};
 
