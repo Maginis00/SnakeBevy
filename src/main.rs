@@ -6,6 +6,7 @@ mod game;
 mod logic;
 mod rendering;
 
+// Main (test)
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
