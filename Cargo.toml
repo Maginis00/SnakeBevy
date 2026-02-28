@@ -1,0 +1,21 @@
+[package]
+name = "snake"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[dependencies.bevy]
+version = "0.18.0"
+features = [
+    "wayland",
+    "dynamic_linking"
+]
+
+# Am Ende der Cargo.toml
+
+[profile.dev]
+opt-level = 1      # Basis-Optimierung an (Code läuft ~10x schneller als ohne)
+
+[profile.dev.package."*"]
+opt-level = 3      # Dependencies (wie Bevy) stark optimieren
